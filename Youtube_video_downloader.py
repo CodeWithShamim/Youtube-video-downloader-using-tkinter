@@ -9,15 +9,12 @@ root = Tk()
 root.title("Youtube-Video-Downloader")
 root.geometry('500x500+300+100')
 root.resizable(width=False, height=False)
-root.iconbitmap('yt.ico')
 root.config(bg='gray3')
 
 #Function create...........................................................
 
 direct = " "
 def open_path():
-        dn_msg.config(text="Please wait a minute, your download running", background='gray3', foreground='dark orange', font=('arial', 10, 'bold'))
-
         dn_title.config(text=" ")
 
         dn_size.config(text=" ")
@@ -29,6 +26,7 @@ def open_path():
         path_h.config(text=direct)
 
 def download():
+        dn_msg.config(text="Please wait a minute, your download running", background='gray3', foreground='dark orange', font=('arial', 10, 'bold'))
         url = entry_link.get()
         path = select_type.get()
         if len(url)<1:
@@ -130,7 +128,10 @@ dn_size = Label(root, background='gray3', foreground='dark orange', font=('arial
 dn_size.place(x=100, y=380)
 
 dn_path = Label(root, background='gray3', foreground='dark orange', font=('arial', 10, 'bold'))
-dn_path.place(x=100, y=420)
+dn_path.place(x=200, y=420)
+
+copyright = Label(root, text="®Copyright©shamim",background='black', foreground='white', font=('arial', 12, 'bold'))
+copyright.place(x=10, y=430)
 
 #------------------------------------------------------------------------------------
 
